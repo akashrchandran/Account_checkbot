@@ -1,14 +1,15 @@
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import ( CommandHandler, Filters, MessageHandler, Updater)
 from message import Editmessage, Sendmessage, logger
-from Check.Altbalaji import altbalaji_helper
-from Check.hotstar import hot_helper
-from Check.voot import Voot_helper
-from Miscellaneous.scope import pastebin, text_scraper, throwbin
+from Checks.Altbalaji import altbalaji_helper
+from Checks.hoichoi import hoichoi_helper
+from Checks.voot import Voot_helper
+from Checks.zee5 import zee_helper
+from Miscellaneous.Scraper import pastebin, text_scraper, throwbin
 import os
 
 
-bot_token = os.environ.get('BOT_TOKEN')
+bot_token = '1768495121:AAG7IARBsqPWAKIuGU-W_0-MkkeFFeVt2Vw'#os.environ.get('BOT_TOKEN')
 #'1471969838:AAHaftsfpwcIUSGMUldTmdxDwemzPVAAzAI'
 startmessage = [[
 		InlineKeyboardButton(
@@ -21,10 +22,6 @@ startmessage = [[
 		)
         ]]
 
-def combos_spilt(combos):
-    split = combos.split('\n')
-    return split
-
 
 def start(update, context):
     info = update.effective_user
@@ -34,6 +31,12 @@ def start(update, context):
     text = f'Welcome @{userid}, To Account Check Bot, to know more use /help or read the telegraph below. This bot is provided for educational use only, any misuse then you should be responsible'
     Sendmessage(chat_id, text, reply_markup=InlineKeyboardMarkup(startmessage))
     return
+
+    
+def combos_spilt(combos):
+    split = combos.split('\n')
+    return split
+
 
 def help(update, context):
     chat_id = update.message.chat_id
@@ -63,14 +66,22 @@ def duty(update, context):
             Sendmessage(chat_id, 'Completed')
         else:
             Voot_helper(chat_id, text[1])
-    elif text[0] == '!hot':
+    elif text[0] == '!hoi':
         if '\n' in text[1]:
             simple = combos_spilt(text[1])
             for i in simple:
-                hot_helper(chat_id, i)
+                hoichoi_helper(chat_id, i)
             Sendmessage(chat_id, 'Completed')
         else:
-            hot_helper(chat_id, text[1])
+            hoichoi_helper(chat_id, text[1])
+    elif text[0] == '!zee':
+        if '\n' in text[1]:
+            simple = combos_spilt(text[1])
+            for i in simple:
+                zee_helper(chat_id, i)
+            Sendmessage(chat_id, 'Completed')
+        else:
+            zee_helper(chat_id, text[1])
     elif text[0] == '!pst':
             try:
                 throwbin(chat_id, text[1])
