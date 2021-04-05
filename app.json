@@ -1,0 +1,26 @@
+{
+    "name": "Account Check Bot",
+    "description": "this app does one little thing, and does it well.",
+    "keywords": [
+        "Checker",
+        "expliot",
+        "network",
+        "Testing",
+        "never"
+    ],
+    "website": "www.akashrchandran.me",
+    "repository": "https://github.com/akashrchandran/Account_checkbot",
+    "success_url": "/",
+    "env": {
+        "TG_BOT_TOKEN": {
+            "description": "your Telegram Bot Token, from @BotFather"
+        },
+    },
+    "formation": {
+        "web": {
+            "quantity": 1,
+            "size": "free"
+        }
+    },
+    "image": "heroku/python"
+}
