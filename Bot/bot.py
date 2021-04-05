@@ -9,8 +9,7 @@ from Miscellaneous.Scraper import pastebin, text_scraper, throwbin
 import os
 
 
-bot_token = '1768495121:AAG7IARBsqPWAKIuGU-W_0-MkkeFFeVt2Vw'#os.environ.get('BOT_TOKEN')
-#'1471969838:AAHaftsfpwcIUSGMUldTmdxDwemzPVAAzAI'
+bot_token = os.environ.get('BOT_TOKEN')
 startmessage = [[
 		InlineKeyboardButton(
 			"Telegraph 📝",
