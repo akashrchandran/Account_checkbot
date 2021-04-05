@@ -1,7 +1,6 @@
 import requests
 from message import Sendmessage, Editmessage, logger
 from datetime import datetime
-from mongo import VOO, HIT
 
 
 head = {
@@ -14,7 +13,6 @@ head = {
 }
 
 def Voot_helper(chat_id, combo):
-    VOO(chat_id)
     status = Sendmessage(chat_id, '<i>Checking</i>')
     if '\n' in combo:
         try:
@@ -36,10 +34,11 @@ def Voot_helper(chat_id, combo):
     payload = '{"type":"traditional","deviceId":"X11","deviceBrand":"PC/MAC","data":{%s,%s}}' % (
         email, password)
 
-    login_url = "https://us-central1-vootdev.cloudfunctions.net/usersV3/v3/login"
+    login_url = "https://userauth.voot.com/usersV3/v3/login"
 
     result = session_requests.post(login_url, data=payload, headers=head)
     response = result.json()
+    print(response)
     if result.status_code != 200:
         logger.info('Login Failed')
         code = response['status']['code']
@@ -76,6 +75,5 @@ def Voot_helper(chat_id, combo):
     Pack_name = pay_list['itemDetails']['name']
     Pack_recur = pay_list['itemDetails']['isRenewable']
     days = human - datetime.today()
-    HIT(chat_id)
     pro_message = f'<b>🌟 Hit Combo 💫</b>\n<b>Site: Voot</b>\n<b>Combo: </b><code>{combo}</code>\n<b>Status: Premium\nPlan: {Pack_name}\nDays Left: {days.days}\nRecurring: {Pack_recur}</b>'
     Editmessage(chat_id, pro_message, status)

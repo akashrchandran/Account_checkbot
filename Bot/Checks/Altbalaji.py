@@ -1,10 +1,8 @@
 import requests
 from datetime import date
 from message import Editmessage, Sendmessage, logger
-from mongo import ALT, HIT
 
 def altbalaji_helper(chat_id, combo):
-    ALT(chat_id)
     status = Sendmessage(chat_id, '<i>Checking</i>')
     if '\n' in combo:
         try:
@@ -54,7 +52,7 @@ def altbalaji_helper(chat_id, combo):
     sub2split = validtosplit.split('-')
     trial = date(int(sub2split[0]), int(sub2split[1]), int(sub2split[2])) < date.today() 
     if trial:
-        free_text = f'<b>Expired Combo ❌</b>\n<b>Site: Altbalaji</b>\n<b>Combo: </b><code>{combo}</code>\n<b>Status: Expired</b>'
+        free_text = f'<b>Expired Combo ❌</b>\n<b>Site: Altbalaji</b>\n<b>Combo: </b><code>{combo}</code>\n<b>Status: Expired/Free</b>'
         Editmessage(chat_id, free_text, status)
         return
     days = date(int(sub2split[0]), int(sub2split[1]), int(sub2split[2])) - date.today()
@@ -62,6 +60,5 @@ def altbalaji_helper(chat_id, combo):
     Pack_name = subscription['default']
     Pack_recur = str(result['orders'][0]['product']['recurring'])
     Pack_date = subscription['en']
-    HIT(chat_id)
     pro_message = f'<b>🌟 Hit Combo 💫</b>\n<b>Site: Altbalaji</b>\n<b>Combo: </b><code>{combo}</code>\n<b>Status: Premium\nPlan: {Pack_name}\nType: {Pack_date}\nDays Left: {days.days}\nRecurring: {Pack_recur.capitalize()}</b>'
     Editmessage(chat_id, pro_message, status)
