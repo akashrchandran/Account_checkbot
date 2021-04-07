@@ -13,13 +13,7 @@ head = {
 }
 
 def Voot_helper(chat_id, combo):
-    status = Sendmessage(chat_id, '<i>Checking</i>')
-    if '\n' in combo:
-        try:
-            combo.split('\n')
-            logger.info('More than 1')
-        except Exception as e:
-            logger.info(e)
+    status = Sendmessage(chat_id, '<i>Checking...</i>')
     try:
         combo_split = combo.split(':')
         inpumail = combo_split[0]
@@ -27,7 +21,7 @@ def Voot_helper(chat_id, combo):
         print(inpumail)
         print(inpupass)
     except IndexError:
-        return Editmessage(chat_id, 'Enter Valid Combo', status)
+        return Editmessage(chat_id, 'Enter Valid Combo😡😡', status)
     session_requests = requests.session()
     email = f'"email": "{inpumail}"'
     password = f'"password":"{inpupass}"'

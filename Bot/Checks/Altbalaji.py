@@ -3,13 +3,7 @@ from datetime import date
 from message import Editmessage, Sendmessage, logger
 
 def altbalaji_helper(chat_id, combo):
-    status = Sendmessage(chat_id, '<i>Checking</i>')
-    if '\n' in combo:
-        try:
-            combo.split('\n')
-            logger.info('More than 1')
-        except Exception as e:
-            logger.info(e)
+    status = Sendmessage(chat_id, '<i>Checking...</i>')
     try:
         combo_split = combo.split(':')
         inpumail = combo_split[0]
@@ -17,7 +11,7 @@ def altbalaji_helper(chat_id, combo):
         print(inpumail)
         print(inpupass)
     except IndexError:
-        return Editmessage(chat_id, 'Enter Valid Combo', status)
+        return Editmessage(chat_id, 'Enter Valid Combo😡😡', status)
     email= f'"username":"{inpumail}"'
     password = f'"password":"{inpupass}"'
 
