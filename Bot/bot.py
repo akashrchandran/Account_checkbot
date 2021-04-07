@@ -10,10 +10,6 @@ import os
 
 
 bot_token = os.environ.get('BOT_TOKEN')
-<<<<<<< HEAD
-
-=======
->>>>>>> 3215dfd5073e89b8988efd63e19cf0f066d4aaab
 startmessage = [[
 		InlineKeyboardButton(
 			"Telegraph 📝",
