@@ -8,8 +8,6 @@ def altbalaji_helper(chat_id, combo):
         combo_split = combo.split(':')
         inpumail = combo_split[0]
         inpupass = combo_split[1]
-        print(inpumail)
-        print(inpupass)
     except IndexError:
         return Editmessage(chat_id, 'Enter Valid Combo😡😡', status)
     email= f'"username":"{inpumail}"'
@@ -21,7 +19,6 @@ def altbalaji_helper(chat_id, combo):
     response = session_request.post(url, data=payload)
     result = response.json()
     if response.status_code != 200:
-        print('error')
         state=result['status']
         code=result['code']
         messg = result['message']

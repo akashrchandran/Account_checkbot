@@ -18,8 +18,6 @@ def Voot_helper(chat_id, combo):
         combo_split = combo.split(':')
         inpumail = combo_split[0]
         inpupass = combo_split[1]
-        print(inpumail)
-        print(inpupass)
     except IndexError:
         return Editmessage(chat_id, 'Enter Valid Combo😡😡', status)
     session_requests = requests.session()
@@ -32,7 +30,6 @@ def Voot_helper(chat_id, combo):
 
     result = session_requests.post(login_url, data=payload, headers=head)
     response = result.json()
-    print(response)
     if result.status_code != 200:
         logger.info('Login Failed')
         code = response['status']['code']
@@ -65,7 +62,6 @@ def Voot_helper(chat_id, combo):
         expire_text = f'<b>Expired Combo ❌</b>\n<b>Site: Voot</b>\n<b>Combo: </b><code>{combo}</code>\n<b>Status: Expired</b>'
         Editmessage(chat_id, expire_text, status)
         return
-    print(pay_list)
     Pack_name = pay_list['itemDetails']['name']
     Pack_recur = pay_list['itemDetails']['isRenewable']
     days = human - datetime.today()
