@@ -1,15 +1,15 @@
 {
-    "name": "Account Check Bot",
+    "name": "Subtitle Search Bot",
     "description": "this app does one little thing, and does it well.",
     "keywords": [
-        "Checker",
-        "expliot",
-        "network",
-        "Testing",
-        "never"
+        "productivity",
+        "search",
+        "subtitle",
+        "srt",
+        "mappo"
     ],
-    "website": "www.akashrchandran.me",
-    "repository": "https://github.com/akashrchandran/Account_checkbot",
+    "website": "https://telesco.pe/SpEcHlDe",
+    "repository": "https://github.com/SpEcHiDe/subtle-search-er/tree/Python",
     "success_url": "/",
     "env": {
         "TG_BOT_TOKEN": {
