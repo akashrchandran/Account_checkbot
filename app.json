@@ -11,7 +11,7 @@
     "website": "www.akashrchandran.me",
     "repository": "https://github.com/akashrchandran/Account_checkbot",
     "success_url": "/",
-    "env": {
+    "env": {{
         "TG_BOT_TOKEN": {
             "description": "your Telegram Bot Token, from @BotFather"
         },
