@@ -14,8 +14,8 @@
     "env": {
         "TG_BOT_TOKEN": {
             "description": "your Telegram Bot Token, from @BotFather"
-        },
-    }
+        }
+    },
     "formation": {
         "web": {
             "quantity": 1,
