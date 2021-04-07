@@ -1,15 +1,14 @@
 {
-    "name": "Subtitle Search Bot",
-    "description": "this app does one little thing, and does it well.",
+    "name": "Account Checker Bot",
+    "description": "Checks Accounts and send results as telegram message",
     "keywords": [
-        "productivity",
-        "search",
-        "subtitle",
-        "srt",
-        "mappo"
+        "Account-Checker",
+        "python",
+        "telegram",
+        "telegram-bot",
+        "Exploit"
     ],
-    "website": "https://telesco.pe/SpEcHlDe",
-    "repository": "https://github.com/SpEcHiDe/subtle-search-er/tree/Python",
+    "repository": "https://github.com/akashrchandran/Account_checkbot/",
     "success_url": "/",
     "env": {
         "TG_BOT_TOKEN": {
