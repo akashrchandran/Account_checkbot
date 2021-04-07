@@ -13,7 +13,7 @@ bot_token = os.environ.get('BOT_TOKEN')
 startmessage = [[
 		InlineKeyboardButton(
 			"Telegraph 📝",
-			url='https://telegra.ph/Instructions-to-Use-This-Bot-12-25'
+			url='https://telegra.ph/Instructions-to-Use-This-Bot-04-07'
 		),
         InlineKeyboardButton(
 			"DEV 👷🏻",
