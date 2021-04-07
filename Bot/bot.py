@@ -9,8 +9,11 @@ from Miscellaneous.Scraper import pastebin, text_scraper, throwbin
 import os
 
 
-bot_token = '1768495121:AAG7IARBsqPWAKIuGU-W_0-MkkeFFeVt2Vw'#os.environ.get('BOT_TOKEN')
-#'1471969838:AAHaftsfpwcIUSGMUldTmdxDwemzPVAAzAI'
+bot_token = os.environ.get('BOT_TOKEN')
+<<<<<<< HEAD
+
+=======
+>>>>>>> 3215dfd5073e89b8988efd63e19cf0f066d4aaab
 startmessage = [[
 		InlineKeyboardButton(
 			"Telegraph 📝",
@@ -40,12 +43,8 @@ def combos_spilt(combos):
 
 def help(update, context):
     chat_id = update.message.chat_id
-    text = "<b>Available Sites:\n!alt~space~combo* - to check Altbalaji accounts\n!hot~space~combo* - to check Hotstar accounts\n!voo~space~combo* - to check Voot accounts\nMiscellaneous:-\n!pst~space~title|text - to paste text on Throwbin.io and get paste link</b>\n\n*combo here means Email:password combination,':' is important."
-    markup = [[InlineKeyboardButton(
-			"Developer",
-			url='https://t.me/pseudo_monk'
-		)]]
-    Sendmessage(chat_id, text, reply_markup= InlineKeyboardMarkup(markup))
+    text = "<b>Available Sites:\n!alt~space~combo* - to check Altbalaji accounts\n!hoi~space~combo* - to check Hoichoi accounts\n!voo~space~combo* - to check Voot accounts\n!zee~space~combo* - to check Zee5 accounts\nMiscellaneous:-\n!pst~space~title|text - to paste text on Throwbin.io and get paste link</b>\n\n*combo here means Email:password combination,':' is important."
+    Sendmessage(chat_id, text, reply_markup= InlineKeyboardMarkup(startmessage))
 
 def duty(update, context):
     chat_id = update.message.chat_id
