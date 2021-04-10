@@ -17,3 +17,13 @@ Altbalaji, Hoichoi, Voot and Zee 5. Could easily expand but don't have that much
 
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
+1. Fork this REPO.
+2. And edit bot.py and other files with your name or anything **(If you know what youre doing)**
+3. Make a new account on www.heroku.com.
+4. Now on the forked repo click the deploy button.
+5. App name can be anything.
+6. TG_BOT_TOKEN you can get it from https://tx.me/BotFather and paste it in the box.
+7. Hit Deploy
+8. Message `/start` to the bot which token you used
+9. Done!!
