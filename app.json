@@ -12,7 +12,7 @@
     "success_url": "/",
     "env": {
         "TG_BOT_TOKEN": {
-            "description": "your Telegram Bot Token, from @BotFather"
+            "description": "Get your token from @BotFather and paste it here."
         }
     },
     "formation": {
