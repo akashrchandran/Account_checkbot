@@ -19,7 +19,7 @@ Altbalaji, Hoichoi, Voot and Zee 5. Could easily expand but don't have that much
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
 1. Fork this REPO.
-2. And edit bot.py and other files with your name or anything **(If you know what youre doing)**
+2. And edit bot.py and other files with your name or anything **(If you know what you're doing)**
 3. Make a new account on www.heroku.com.
 4. Now on the forked repo click the deploy button.
 5. App name can be anything.
