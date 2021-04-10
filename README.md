@@ -13,7 +13,7 @@ Yes, but NO. I don't use any proxy servers as you can see in the code. Some site
 # Available sites are
 Altbalaji, Hoichoi, Voot and Zee 5. Could easily expand but don't have that much time. Anybody want to contribute can check the Bot folder and Checkers folder or view any other checkers file and make a checker for new site and sent pull request, I will be glad to accept it.
 
-##Deployment
+#**Deployment**
 
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
