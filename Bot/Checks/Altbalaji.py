@@ -38,7 +38,10 @@ def altbalaji_helper(chat_id, combo):
     }
     response = session_request.get(subs_url, headers=head2)
     result = response.json()
-    print(result)
+    if result['orders'] == []:
+         expired_text = f'<b>Free Combo ❌</b>\n<b>Site: Altbalaji</b>\n<b>Combo: </b><code>{combo}</code>\n<b>Status: Free</b>'
+         Editmessage(chat_id, expired_text, status)
+         return
     validto = result['orders'][0]['dates']['valid_to']
     validtosplit = validto.split('T')[0]
     sub2split = validtosplit.split('-')
