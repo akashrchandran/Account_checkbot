@@ -38,6 +38,7 @@ def altbalaji_helper(chat_id, combo):
     }
     response = session_request.get(subs_url, headers=head2)
     result = response.json()
+    print(result)
     validto = result['orders'][0]['dates']['valid_to']
     validtosplit = validto.split('T')[0]
     sub2split = validtosplit.split('-')
