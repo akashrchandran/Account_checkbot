@@ -1,5 +1,5 @@
 import requests
-from message import logger, Sendmessage, editmessage
+from message import logger, Sendmessage, Editmessage
 from datetime import date
 
 head = {
@@ -15,7 +15,7 @@ def zee_helper(chat_id, combo):
         inpumail = combo_split[0]
         inpupass = combo_split[1]
     except IndexError:
-        editmessage(chat_id, 'Enter Valid Combo😡😡', status)
+        Editmessage(chat_id, 'Enter Valid Combo😡😡', status)
         return
     session_requests = requests.session()
     email= f'"email": "{inpumail}"'
@@ -29,7 +29,7 @@ def zee_helper(chat_id, combo):
         code = response['code']
         msg = response['message']
         text = f'<b>Bad Combo ❌</b>\n<b>Combo: </b><code>{combo}</code>\n<b>Status: Error\nCode: {code}\nMessage: {msg}\nSite: Zee5</b>'
-        editmessage(chat_id, text, status)
+        Editmessage(chat_id, text, status)
         return
     acess = response['access_token']
     head2 = {
@@ -46,7 +46,7 @@ def zee_helper(chat_id, combo):
     # print(result1)
     if result1 == []:
         expire_text = f'<b>Expired Combo ❌</b>\n<b>Site: Zee5</b>\n<b>Combo: </b><code>{combo}</code>\n<b>Status: Expired</b>'
-        editmessage(chat_id, expire_text, status)
+        Editmessage(chat_id, expire_text, status)
         return
     timedioint = result1[0]["subscription_end"].split('T')[0]
     sub2split = timedioint.split('-')
@@ -56,4 +56,4 @@ def zee_helper(chat_id, combo):
     Pack_pyed = result1[0]['payment_provider']
     pro_message = f'<b>🌟 Hit Combo 💫</b>\n<b>Site: Zee5</b>\n<b>Combo: </b><code>{combo}</code>\n<b>Status: Premium\nPlan: {Pack_name}\nDays Left: {trial.days} Days\nPayment: {Pack_pyed}\nRecurring: {Pack_recur}</b>'
     # print(pro_message)
-    editmessage(chat_id, pro_message, status)
+    Editmessage(chat_id, pro_message, status)
