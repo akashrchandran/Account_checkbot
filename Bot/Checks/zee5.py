@@ -55,6 +55,6 @@ def zee_helper(chat_id, combo):
     pack_price = str(result1[0]['subscription_plan']['price'])
     Pack_recur = result1[0]['recurring_enabled']
     Pack_pyed = result1[0]['payment_provider']
-    pro_message = f'<b>🌟 Hit Combo 💫</b>\n<b>Site: Zee5</b>\n<b>Combo: </b><code>{combo}</code>\n<b>Plan: {Pack_name}\nPrice: {Pack_name} INR\nDays Left: {trial.days} Days\nPayment: {Pack_pyed}\nRecurring: {Pack_recur}</b>'
+    pro_message = f'<b>🌟 Hit Combo 💫</b>\n<b>Site: Zee5</b>\n<b>Combo: </b><code>{combo}</code>\n<b>Plan: {Pack_name}\nPrice: {pack_price} INR\nDays Left: {trial.days} Days\nPayment: {Pack_pyed}\nRecurring: {Pack_recur}</b>'
     # print(pro_message)
     Editmessage(chat_id, pro_message, status)
