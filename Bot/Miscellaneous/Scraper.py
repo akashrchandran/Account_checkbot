@@ -13,6 +13,15 @@ def pastebin(chat_id, link):
     cleared = sperator.join(lst)
     Sendmessage(chat_id, cleared)
 
+def ghostbin(chat_id, link):
+    response = requests.get(link)
+    soup = BeautifulSoup(response.content, 'html.parser')
+    text = soup.find('textarea', 'form-control').text
+    lst = re.findall('\S+@\S+.\S+:\S+', str(text))
+    sperator = '\n'
+    cleared = sperator.join(lst)
+    Sendmessage(chat_id, cleared)
+
 def text_scraper(chat_id, text):
     lst = re.findall('\S+@\S+.\S+:\S+', str(text))
     sperator = '\n'

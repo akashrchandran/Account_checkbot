@@ -57,6 +57,3 @@ def zee_helper(chat_id, combo):
     pro_message = f'<b>🌟 Hit Combo 💫</b>\n<b>Site: Zee5</b>\n<b>Combo: </b><code>{combo}</code>\n<b>Status: Premium\nPlan: {Pack_name}\nDays Left: {trial.days} Days\nPayment: {Pack_pyed}\nRecurring: {Pack_recur}</b>'
     # print(pro_message)
     editmessage(chat_id, pro_message, status)
-
-
-zee_helper(1233, 'jayasrijakki1995@gmail.com:8106750139')

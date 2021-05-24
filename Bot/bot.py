@@ -5,7 +5,7 @@ from Checks.Altbalaji import altbalaji_helper
 from Checks.hoichoi import hoichoi_helper
 from Checks.voot import Voot_helper
 from Checks.zee5 import zee_helper
-from Miscellaneous.Scraper import pastebin, text_scraper, throwbin
+from Miscellaneous.Scraper import pastebin, text_scraper, throwbin, ghostbin
 import os
 
 
@@ -94,6 +94,9 @@ def scraperdfnc(update, context):
         if 'pastebin' in msg:
             link = msg.split(' ')[1]
             pastebin(chat_id,link)
+        elif 'pastebin' in msg:
+            link = msg.split(' ')[1]
+            ghostbin(chat_id,link)
         else:
             scrape_text = status_msg['reply_to_message']['text']
             text_scraper(chat_id, scrape_text)
