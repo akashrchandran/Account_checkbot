@@ -94,7 +94,7 @@ def scraperdfnc(update, context):
         if 'pastebin' in msg:
             link = msg.split(' ')[1]
             pastebin(chat_id,link)
-        elif 'pastebin' in msg:
+        elif 'ghostbin' in msg:
             link = msg.split(' ')[1]
             ghostbin(chat_id,link)
         else:
