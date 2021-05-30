@@ -1,5 +1,5 @@
 <h1 align="center">
-  🐱‍💻 Telegram Account Check Bot 🐱‍💻
+Account Check Bot
 </h1>
 
 <div align="center">
