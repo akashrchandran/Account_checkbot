@@ -73,4 +73,3 @@ def Voot_helper(chat_id, combo):
     Editmessage(chat_id, pro_message, status)
 
 
-Voot_helper(122, 'neeraj210793@gmail.com:02741927')
