@@ -56,6 +56,3 @@ def hoichoi_helper(chat_id, combo):
     Editmessage(chat_id, pro_message, status)
     return
 
-
-
-hoichoi_helper(123, "uddipta.ghoshdastidar@gmail.com:Ugd@1112")
