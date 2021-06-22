@@ -15,9 +15,10 @@ Account Check Bot
     </td>
     <td align="center">
       For Demo you can check
-      <a href="http://tx.me/Acc_CheckBot">
-        <img src="https://cdn1.telesco.pe/file/DLngTulb9UNenPYQoQvPURySLfBhOABqkeRlg7Oa_52aE8pCQ8T33HKpgx6Cnirfrr0e7hYdu1tnKRlGI0VxQJxfLHvDZMJBf6fLYoGniH81O8Oq3iGJNwse220TeaKj9-1HfxGjJXYAQrfqUFqF0izOG0fMFiFTdD4VYJD8azjwet6kuTyHEEWwznBHczaZa_BQj9j6RbKiq82ncxObFOpRUfbpEygh71dvi71etFU55dwEvmuIvXAt4GlQ-WNJzNKhkuangOUuQFjbeefKGhu8JhMww6rZQGaShhOteogusdOL4iHyduhNvmICXWY_BvIe2Y1s8SsxOVYZoNkvfw.jpg" alt="YouTube thumbmnail for Stargate" />
+      <a href="https://tx.me/Pseudo_Monk">
+        <img src="https://images-na.ssl-images-amazon.com/images/I/71JLC2xwlTL.png" />
       </a>
     </td>
   </tr>
 </table>
+#All updates are paused till further notice
