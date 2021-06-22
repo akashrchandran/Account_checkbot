@@ -21,3 +21,4 @@ Account Check Bot
     </td>
   </tr>
 </table>
+#All updates are paused till further notice
