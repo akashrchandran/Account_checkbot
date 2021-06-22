@@ -56,7 +56,11 @@ def Voot_helper(chat_id, combo):
         return
     pay_list = result['results']['list'][0]
     ts = int(pay_list['endDate']['timeStamp'])
-    human = datetime.utcfromtimestamp(ts)
+    print(ts)
+    try:
+        human = datetime.utcfromtimestamp(ts)
+    except ValueError:
+        human = datetime.fromtimestamp(ts/1000.0)
     expire = human < datetime.today()
     if expire:
         expire_text = f'<b>Expired Combo ❌</b>\n<b>Site: Voot</b>\n<b>Combo: </b><code>{combo}</code>\n<b>Status: Expired</b>'
@@ -67,3 +71,6 @@ def Voot_helper(chat_id, combo):
     days = human - datetime.today()
     pro_message = f'<b>🌟 Hit Combo 💫</b>\n<b>Site: Voot</b>\n<b>Combo: </b><code>{combo}</code>\n<b>Status: Premium\nPlan: {Pack_name}\nDays Left: {days.days}\nRecurring: {Pack_recur}</b>'
     Editmessage(chat_id, pro_message, status)
+
+
+Voot_helper(122, 'neeraj210793@gmail.com:02741927')

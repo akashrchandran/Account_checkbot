@@ -48,7 +48,6 @@ def hoichoi_helper(chat_id, combo):
     url2 = 'https://prod-api.viewlift.com/subscription/user?site=hoichoitv&userId=f76c181a-94b5-11eb-a8b3-0242ac130003'
     session2 = session_request.get(url2, headers=head2)
     result2 = session2.json()
-    print(result2)
     timedioint = result2["subscriptionInfo"]["subscriptionEndDate"].split('T')[0]
     sub2split = timedioint.split('-')
     trial = date(int(sub2split[0]), int(sub2split[1]), int(sub2split[2])) - date.today()
