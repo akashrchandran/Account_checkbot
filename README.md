@@ -16,7 +16,7 @@ Account Check Bot
     <td align="center">
       For Demo you can check
       <a href="http://tx.me/Acc_CheckBot">
-        <img src="https://images2.minutemediacdn.com/image/upload/c_fill,g_auto,h_1248,w_2220/v1555924299/shape/mentalfloss/rick_astley.jpg?itok=2VUYz0ay" />
+        <img src="https://images-na.ssl-images-amazon.com/images/I/71JLC2xwlTL.png" />
       </a>
     </td>
   </tr>
