@@ -8,8 +8,8 @@
   "formation": {
     "worker": {
       "quantity": 1 ,
-      "size": "free"
+      "size": "free",
     }
   }
-     "image": "heroku/python"
+     "image": "heroku/python",
 }
