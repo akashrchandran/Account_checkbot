@@ -15,7 +15,7 @@ Account Check Bot
     </td>
     <td align="center">
       For Demo you can check
-      <a href="https://tx.me/Pseudo_Monk">
+      <a href="https://tx.me/Acc_CheckBot">
         <img src="https://images-na.ssl-images-amazon.com/images/I/71JLC2xwlTL.png" />
       </a>
     </td>
