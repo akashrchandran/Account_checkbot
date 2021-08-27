@@ -130,7 +130,7 @@ def main():
         updater.start_webhook(
             listen="0.0.0.0",
             port=PORT,
-            url_path=TG_BOT_TOKEN
+            url_path=bot_token
         )
         updater.bot.set_webhook(url=HEROKU_URL + bot_token)
     else:
