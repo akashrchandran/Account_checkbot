@@ -127,7 +127,6 @@ def main():
     dp.add_handler(CommandHandler("help", help))
     logger.info("Bot Started!!!")
     if WEBHOOK:
-        LOGGER.info("using WEBHOOKs")
         updater.start_webhook(
             listen="0.0.0.0",
             port=PORT,
