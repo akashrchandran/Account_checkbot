@@ -12,7 +12,7 @@ import os
 
 bot_token = os.environ.get('TG_BOT_TOKEN')
 WEBHOOK = bool(os.environ.get("WEBHOOK", False))
-PORT = int(os.environ.get("PORT", "1234"))
+PORT = int(80)
 HEROKU_URL = os.environ.get("HEROKU_URL")
 startmessage = [[
 		InlineKeyboardButton(
