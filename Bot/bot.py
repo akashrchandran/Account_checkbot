@@ -132,7 +132,7 @@ def main():
             port=PORT,
             url_path=TG_BOT_TOKEN
         )
-        updater.bot.set_webhook(url=HEROKU_URL + TG_BOT_TOKEN)
+        updater.bot.set_webhook(url=HEROKU_URL + bot_token)
     else:
         updater.start_polling()
     updater.idle()
