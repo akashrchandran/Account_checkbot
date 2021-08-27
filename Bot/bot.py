@@ -128,7 +128,7 @@ def main():
     logger.info("Bot Started!!!")
     if WEBHOOK:
         updater.start_webhook(
-            listen="0.0.0.0",
+            listen="127.0.0.1",
             port=PORT,
             url_path=bot_token
         )
