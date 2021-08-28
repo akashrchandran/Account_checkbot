@@ -10,5 +10,5 @@ Account Check Bot
 
 <h2>This branch is for deploy at <a href="https://railway.app/" target="_blank">Railway</a></h2>
 
-[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new?template=https://github.com/akashrchandran/Account_checkbot/railway)
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new?template=https://github.com/akashrchandran/Account_checkbot)
 
