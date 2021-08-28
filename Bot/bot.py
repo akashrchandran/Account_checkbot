@@ -126,14 +126,7 @@ def main():
     dp.add_handler(CommandHandler("start", start))
     dp.add_handler(CommandHandler("help", help))
     logger.info("Bot Started!!!")
-    if WEBHOOK:
-        updater.start_webhook(
-            port=PORT,
-            url_path=bot_token,
-	    webhook_url= HEROKU_URL + bot_token
-        )
-    else:
-        updater.start_polling()
+    updater.start_polling()
     updater.idle()
 
 
