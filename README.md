@@ -6,19 +6,9 @@ Account Check Bot
 
 [![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
  
-<div>
+</div>
 
-<table border="0">
-  <tr>
-    <td align="center">
-      Telegram Bot using a simple <a target="https://python-telegram-bot.readthedocs.io/" >Python Telegram Bot</a> library, which can check if email and passwords are correct for many sites and returns if the account have any subscription
-    </td>
-    <td align="center">
-      For Demo you can check
-      <a href="https://tx.me/Acc_CheckBot">
-        <img src="https://images-na.ssl-images-amazon.com/images/I/71JLC2xwlTL.png" />
-      </a>
-    </td>
-  </tr>
-</table>
-#All updates are paused till further notice
+<h2>This branch is for deploy at <a href="https://railway.app/" target="_blank">Railway</a></h2>
+
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new?template=https://github.com/akashrchandran/Account_checkbot/railway)
+
