@@ -128,10 +128,11 @@ def main():
     logger.info("Bot Started!!!")
     if WEBHOOK:
         updater.start_webhook(
+	    listen="0.0.0.0",
             port=PORT,
-            url_path=bot_token
+            url_path=bot_token,
+	    webhook_url=f'https://{HEROKU_URL}-production.up.railway.app/' + bot_token
         )
-        updater.bot.set_webhook(url=HEROKU_URL + bot_token)
     else:
         updater.start_polling()
     updater.idle()
