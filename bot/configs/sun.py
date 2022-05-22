@@ -1,6 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
-from message import Sendmessage, Editmessage
+from bot.helper.message import Sendmessage, Editmessage
 import json
 
 head = {

@@ -2,7 +2,7 @@ import re
 from bs4 import BeautifulSoup
 import requests
 from throwbin import ThrowBin
-from message import Sendmessage, Editmessage
+from bot.helper.message import Sendmessage, Editmessage
 
 def pastebin(chat_id, link):
     response = requests.get(link)
