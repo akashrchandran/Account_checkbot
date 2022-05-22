@@ -5,7 +5,6 @@ from Checks.Altbalaji import altbalaji_helper
 from Checks.hoichoi import hoichoi_helper
 from Checks.voot import Voot_helper
 from Checks.zee5 import zee_helper
-from Checks.sun import Sun_helper
 from Miscellaneous.Scraper import pastebin, text_scraper, throwbin, ghostbin
 import os
 
@@ -79,14 +78,6 @@ def duty(update, context):
             Sendmessage(chat_id, 'Completed')
         else:
             zee_helper(chat_id, text[1])
-    elif text[0] == '!sun':
-        if '\n' in text[1]:
-            simple = combos_spilt(text[1])
-            for i in simple:
-                Sun_helper(chat_id, i)
-            Sendmessage(chat_id, 'Completed')
-        else:
-            Sun_helper(chat_id, text[1])
     elif text[0] == '!pst':
             try:
                 throwbin(chat_id, text[1])
