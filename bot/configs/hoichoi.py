@@ -5,11 +5,11 @@ def test_run():
     test_email = 'randommail@yahoo.com'
     test_pass = 'testthispassword'
     try:
-        print(hoichoi_helper(test_email, test_pass))
+        print(start(test_email, test_pass))
     except Exception as e:
         raise e
 
-def hoichoi_helper(email, password):
+def start(email, password):
     session_request = requests.Session()
     url = 'https://prod-api.viewlift.com/identity/signin?site=hoichoitv&deviceId=browser-f76c181a-94b5-11eb-a8b3-0242ac130003'
     payload = '{"email":"%s","password":"%s"}' %(email, password)

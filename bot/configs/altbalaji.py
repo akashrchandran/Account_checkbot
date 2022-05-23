@@ -6,12 +6,12 @@ def test_run():
     test_email = 'randommail@yahoo.com'
     test_pass = 'testthispassword'
     try:
-        print(altbalaji_helper(test_email, test_pass))
+        print(start(test_email, test_pass))
     except Exception as e:
         raise e
 
 
-def altbalaji_helper(email, password):
+def start(email, password):
     session_request = requests.Session()
     url = 'https://api.cloud.altbalaji.com/accounts/login?domain=IN'
     payload = '{"username":"%s","password":"%s"}' % (email, password)

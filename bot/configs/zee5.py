@@ -5,11 +5,11 @@ def test_run():
     test_email = 'randommail@yahoo.com'
     test_pass = 'testthispassword'
     try:
-        print(zee_helper(test_email, test_pass))
+        print(start(test_email, test_pass))
     except Exception as e:
         raise e
 
-def zee_helper(email, password):
+def start(email, password):
     session_requests = requests.session()
     session_requests.headers['content-type'] = 'application/json'
     payload = '{"email": "%s", "password":"%s"}' %(email, password)

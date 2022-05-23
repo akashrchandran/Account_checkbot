@@ -6,12 +6,11 @@ def test_run():
     test_email = 'randommail@yahoo.com'
     test_pass = 'testthispassword'
     try:
-        print(voot_helper(test_email, test_pass))
+        print(start(test_email, test_pass))
     except Exception as e:
         raise e
 
-
-def voot_helper(email, password):
+def start(email, password):
     session_requests = requests.session()
     payload = '{"type":"traditional","deviceId":"X11","deviceBrand":"PC/MAC","data":{"email":"%s","password":"%s"}}' % (
         email, password)
@@ -35,13 +34,10 @@ def voot_helper(email, password):
         human = datetime.utcfromtimestamp(ts)
     except ValueError:
         human = datetime.fromtimestamp(ts/1000.0)
-    expire = human < datetime.today()
+    expire = human < datetime.now()
     if expire:
         return False, {'status': 'Expired'}
     Pack_name = pay_list['itemDetails']['name']
     Pack_recur = pay_list['itemDetails']['isRenewable']
-    days = human - datetime.today()
+    days = human - datetime.now()
     return True, {'Status': 'Premium', 'Plan': Pack_name, 'Days Left': days.days, 'Recurring': Pack_recur}
-
-
-test_run()
