@@ -3,8 +3,8 @@ import requests
 import json
 
 def test_run():
-    test_email = 'sarisalsangi5@gmail.com'
-    test_pass = 'sari_123'
+    test_email = 'randommail@yahoo.com'
+    test_pass = 'testthispassword'
     try:
         print(start(test_email, test_pass))
     except Exception as e:
@@ -15,8 +15,7 @@ def get_ready():
     header = {'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36'}
     req = requests.get("https://www.sunnxt.com/", headers=header)
     crsf_token = re.search(r'<meta name="csrf-token" content="(\S+)"', req.text)[1]
-    print(crsf_token)
-
+    
 def start(email, password):
     session_requests = requests.session()
     session_requests.headers["x-csrf-token"] = crsf_token

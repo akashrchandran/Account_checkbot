@@ -30,8 +30,7 @@ def start(update, context):
 
     
 def combos_spilt(combos):
-    split = combos.split('\n')
-    return split
+    return combos.split('\n')
 
 
 def help(update, context):
