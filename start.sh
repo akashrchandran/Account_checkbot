@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-python3 Bot/bot.py "$@"
+python3 -m bot
