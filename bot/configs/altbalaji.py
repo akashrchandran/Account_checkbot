@@ -6,7 +6,7 @@ config_info = ConfigInfo(
     name="Altbalaji config",
     site="https://altbalaji.com",
     proxy=False,
-    supported= ComboStats(hit = Hit, free = Free, expire = Expired),
+    supported= ComboStats(bad = Bad, hit = Hit, free = Free, expire = Expired),
 )
 
 class Interface:

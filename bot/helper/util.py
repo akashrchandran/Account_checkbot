@@ -31,9 +31,10 @@ class Hit:
 
 @dataclass
 class ComboStats:
+    bad: Bad
     hit: Hit
-    expire: Expired
-    free: Free
+    expire: Optional[Expired] = None
+    free: Optional[Free] = None
 
 @dataclass
 class ConfigInfo:
