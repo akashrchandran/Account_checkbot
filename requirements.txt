@@ -1,6 +1,6 @@
-python-telegram-bot
-requests
-datetime
-pymongo
-bs4
-throwbin
+beautifulsoup4==4.11.1
+psutil==5.9.1
+python_telegram_bot==13.13
+requests==2.28.1
+telegram==0.0.1
+throwbin==0.1
