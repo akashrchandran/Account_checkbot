@@ -13,12 +13,12 @@ config_info = ConfigInfo(
 
 class Interface:
     def __init__(self):
-        self.session = requests.Session()
-        self.session.headers['user-agent'] = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36'
         req = self.session.get("https://www.sunnxt.com/")
         self.crsf_token = re.search(r'<meta name="csrf-token" content="(\S+)"', req.text)[1]
 
     def check(self, email, password):
+        self.session = requests.Session()
+        self.session.headers['user-agent'] = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36'
         self.session.headers["x-csrf-token"] = self.crsf_token
         self.session.headers["x-requested-with"] = 'XMLHttpRequest'
         self.session.headers["content-type"] = "application/json;charset=UTF-8"

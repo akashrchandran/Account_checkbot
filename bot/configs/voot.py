@@ -11,11 +11,9 @@ config_info = ConfigInfo(
 )
 
 class Interface:
-    def __init__(self):
+    def check(self, email, password):
         self.session = requests.Session()
         self.session.headers['content-type'] = 'application/json;charset=UTF-8'
-
-    def check(self, email, password):
         payload = '{"type":"traditional","deviceId":"X11","deviceBrand":"PC/MAC","data":{"email":"%s","password":"%s"}}' % (email, password)
         result = self.session.post("https://userauth.voot.com/usersV3/v3/login", data=payload)
         response = result.json()

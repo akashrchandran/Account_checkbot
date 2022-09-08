@@ -10,13 +10,11 @@ config_info = ConfigInfo(
 )
 
 class Interface:
-    def __init__(self):
+    def check(self, email, password):
         self.session = requests.Session()
         self.session.headers['user-agent'] = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36'
         self.session.headers['content-type'] = 'application/json'
         self.session.headers['accept'] = 'application/json, text/plain, */*'
-    
-    def check(self, email, password):
         url = 'https://api.cloud.altbalaji.com/accounts/login?domain=IN'
         payload = '{"username":"%s","password":"%s"}' % (email, password)
         response = self.session.post(url, data=payload)
@@ -33,20 +31,12 @@ class Interface:
         validto = result['orders'][0]['dates']['valid_to']
         validtosplit = validto.split('T')[0]
         sub2split = validtosplit.split('-')
-        trial = date(int(sub2split[0]), int(sub2split[1]),
-                    int(sub2split[2])) < date.today()
+        trial = date(int(sub2split[0]), int(sub2split[1]),int(sub2split[2])) < date.today()
         if trial:
             return Expired()
-        days = date(int(sub2split[0]), int(sub2split[1]),
-                    int(sub2split[2])) - date.today()
+        days = date(int(sub2split[0]), int(sub2split[1]), int(sub2split[2])) - date.today()
         subscription = result['orders'][0]['product']['titles']
         Pack_name = subscription['default']
         Pack_recur = bool(result['orders'][0]['product']['recurring'])
         Pack_date = subscription['en']
-        return Hit(plan=Pack_name,
-                    type=Pack_date,
-                    left=days.days,
-                    recur=Pack_recur
-                            )
-# idlew = Interface()
-# print(idlew.check('kumardhiraj889@gmail.com','1707198o'))
+        return Hit(plan=Pack_name, type=Pack_date, left=days.days, recur=Pack_recur)

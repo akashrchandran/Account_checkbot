@@ -11,12 +11,11 @@ config_info = ConfigInfo(
 )
 
 class Interface:
-    def __init__(self):
+    def check(self, email, password):
         self.session = requests.session()
         self.session.headers['content-type'] = 'application/json'
         self.session.headers['user-agent'] = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36'
         self.session.headers['accept'] = '*/*'
-    def check(self, email, password):
         payload = '{"email": "%s", "password":"%s"}' %(email, password)
         result = self.session.post("https://userapi.zee5.com/v2/user/loginemail", data=payload)
         response = result.json()

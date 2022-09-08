@@ -11,11 +11,9 @@ config_info = ConfigInfo(
 )
 
 class Interface:
-    def __init__(self):
+    def check(self, email, password):
         self.session = requests.Session()
         self.session.params = {"site": "hoichoitv", "userId": "f76c181a-94b5-11eb-a8b3-0242ac130003"}
-
-    def check(self, email, password):
         payload = '{"email":"%s","password":"%s"}' %(email, password)
         response = self.session.post('https://prod-api.viewlift.com/identity/signin', data=payload)
         result = response.json()
